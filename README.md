@@ -1,7 +1,7 @@
 # nycscertweb
 
 ## Team
-Eric Liu  
+~Eric Liu  ~
 Peter Tsun
 
 ### Programs
