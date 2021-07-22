@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>nyCScertWeb</title>
+</head>
+<body>
+
+<h1> Porfolio for Summer 2021 Hunter College</h1>
+<h3> Teammates: Emma Wingreen, Julian Irimina, Peter Tsun </h3>
+<p>During the summer of 2021, a group of about 20 teachers had an opportunity
+  to study computer science. This page shows some of the work done
+in this computer science program.</p>
+
+<hr>
+
+<h2> Computer Programming in Java </h2>
+
+<p>
+  One of the things we did in computer programming in Java was recursion. In recursion, we consider
+  the base case, what to do for recursive call, and what to do after recursive
+  call. In the example of fibonacci, the base case is fib(0) = 0 and fib(1) = 1.
+  The recursive call is call fib(n-1) and fib(n-2). When the recursive calls return,
+  the fib() adds the two returned values: fib(n) = fib(n-1) + fib(n-2).
+</p>
+
+<pre>
+  <code>
+
+    public static int fib(int n) {
+      if(n==0 || n==1){
+        return  n;
+      }
+      else {
+        return fib(n-1) + fib(n-2);
+      }
+    }
+  </code>
+</pre>
+
+<hr>
+
+<h2> Data Structure </h2>
+
+<p>
+  In data structure, we learn about linked list.
+  One of the things we got to do is to insert an element in the linked list.
+  To understand how it works, we collaborate to create a diagram that shows
+  how the pointers should link different nodes in the list. After coding the
+  insertion method, we also do another diagram to verify that the code does
+  what it should do.
+</p>
+
+<pre>
+  <code>
+
+    public void insert(int index, String value){
+      int count = 0;
+      Node currentNode = front;
+      Node newNode = new Node(value);
+      if (currentNode != null && index == 0){
+        newNode.setNext(currentNode);
+        front = newNode;
+        return;
+      }
+      while (currentNode != null){
+        if (count == index - 1){
+          newNode.setNext(currentNode.getNext());
+          currentNode.setNext(newNode);
+        }
+        count = count + 1;
+        currentNode = currentNode.getNext();
+      }
+    }
+  </code>
+</pre>
+
+<hr>
+
+<h2> Method 1 </h2>
+
+<p>
+  In method, we learn about live coding. In one group,
+  Liam Baum showed other people in the group how to introduce
+  p5js by live coding a simple animation
+</p>
+
+<pre>
+  <code>
+
+    // https://editor.p5js.org/
+
+    let x = 100;
+    let direction = 1;
+
+    function setup() {
+      createCanvas(400, 400);
+    }
+
+    function draw() {
+      background(220);
+      ellipse(x, 200, 50);
+      if (x > 375 && direction == 1) {
+        direction = -1;
+      } else if (x < 25 && direction == -1) {
+        direction = 1;
+      }
+      x = x + direction * 1;
+    }
+
+  </code>
+</pre>
+
+<hr>
+
+<h2> Reflection </h2>
+
+<p>
+  There is a lot of wonderful things happening in the Hunter CS advanced certificate program.
+  It is not just programming, but also about problem solving and analytical thinking.
+  We also learn to think through solutions to see if they make sense. Students will
+  benefit from these training because teachers are better equipped to guide students
+  in their study of computer science and computer engineering.
+</p>
+
+</body>
+</html>
